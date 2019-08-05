@@ -13,6 +13,13 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
+    path: '/',
+    name: 'index',
+    component(resolve) {
+        require.ensure(['./App.vue'], () => {
+            resolve(require('./App.vue'));
+        });
+    },
     routes: [
         {
             path: '/',
