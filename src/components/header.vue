@@ -13,6 +13,7 @@
 <script>
 import avatar from "@/assets/logo.png";
 export default {
+  name: "Pheader",
   data() {
     return {
       img: {
