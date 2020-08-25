@@ -9,22 +9,22 @@
           <Paside asideData="asideData"></Paside>
         </el-aside>
         <el-main>
-          <p>{{ message }}</p>
+        <!-- <transition> -->
+
+              <router-view></router-view>
+        <!-- </transition> -->
+          <!-- <p>{{ message }}</p>
           <input type="text" v-model="message" />
           <ul>
             <li v-for="item in items" :key="item">{{ item.message }}</li>
           </ul>
-          <div v-on:click="add">点击增加</div>
+          <div v-on:click="add">点击增加</div> -->
         </el-main>
       </el-container>
     </el-container>
-    <!-- <ul id="example-1">
-        134567
-        <li v-for="item in items" :key="item.id">{{ item.message }}</li>
-    </ul>-->
     <!-- <router-link to="/">Home</router-link>|
     <router-link to="/about">About</router-link>-->
-    <!-- <router-view /> -->
+    <!-- <router-view />-->
   </div>
 </template>
 
@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     add: function() {
-      this.items = this.items.push({ message: "第三个", id: 3 });
+      this.items.push({ message: "第三个", id: 3 });
     }
   }
 };
